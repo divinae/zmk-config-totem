@@ -106,20 +106,15 @@
             layers = <1>;
         };
 
-        caps_word {
-            bindings = <&caps_word>;
-            key-positions = <13 16>;
-        };
-
         boot_left {
             bindings = <&bootloader>;
-            key-positions = <0 20>;
+            key-positions = <0 21>;
             layers = <2>;
         };
 
         boot_right {
             bindings = <&bootloader>;
-            key-positions = <9 29>;
+            key-positions = <9 30>;
             layers = <4>;
         };
     };
@@ -147,53 +142,53 @@
             bindings = <
          &kp Q         &kp W         &kp E          &kp R                   &kp T           &kp Y           &kp U                  &kp I          &kp O         &kp P
          &hrml LALT A  &hrml LGUI S  &hrml LCTRL D  &shift_left LSHIFT F    &kp G           &kp H           &shift_right LSHIFT J  &hrmr LCTRL K  &hrmr LGUI L  &hrmr LALT SEMI
-&kp ESC  &kp Z         &kp X         &kp C          &kp V                   &kp B           &kp N           &kp M                  &kp COMMA      &kp DOT       &kp FSLH         &kp CAPS
+&kp ESC  &kp Z         &kp X         &kp C          &kp V                   &kp B           &kp N           &kp M                  &kp COMMA      &kp DOT       &kp FSLH         &caps_word
                                      &kp LGUI       &backspace 1 BACKSPACE  &thumb 2 ESC    &thumb 4 ENTER  &space 3 SPACE         &kp RALT
             >;
         };
 
         navigation {
             bindings = <
-&kp LC(PAGE_UP)   &kp LA(LEFT)  &kp LA(RIGHT)        &kp LC(PAGE_DOWN)      &email           &kp PAGE_UP        &kp HOME       &kp LC(LA(LEFT))  &kp LA(LC(RIGHT))  &kp END
-&hrml LALT LC(A)  &kp LGUI      &hrml LCTRL LC(TAB)  &shift_left LSHFT DEL  &kp ENTER        &kp PAGE_DOWN      &kp LEFT       &kp DOWN          &kp UP             &kp RIGHT
-&none &kp LC(Z)         &kp LC(X)     &kp LC(C)            &kp LC(V)              &kp LS(LC(Z))    &kp K_APP          &kp BACKSPACE  &kp LS(TAB)       &kp TAB            &kp DEL &none
-                                                     &none                  &none            &kp LC(BACKSPACE)  &kp LC(DEL)
+       &kp LC(PAGE_UP)   &kp LA(LEFT)  &kp LA(RIGHT)        &kp LC(PAGE_DOWN)      &email               &kp PAGE_UP    &kp HOME       &kp LC(LA(LEFT))  &kp LA(LC(RIGHT))  &kp END
+       &hrml LALT LC(A)  &kp LGUI      &hrml LCTRL LC(TAB)  &shift_left LSHFT DEL  &kp ENTER            &kp PAGE_DOWN  &kp LEFT       &kp DOWN          &kp UP             &kp RIGHT
+&none  &kp LC(Z)         &kp LC(X)     &kp LC(C)            &kp LC(V)              &kp LS(LC(Z))        &kp K_APP      &kp BACKSPACE  &kp LS(TAB)       &kp TAB            &kp DEL    &none
+                                       &none                &none                  &kp LC(BACKSPACE)    &kp LC(DEL)
             >;
         };
 
         numbers {
             bindings = <
-&none     &none     &none      &none      &none    &none      &kp N7  &kp N8  &kp N9  &kp EQUAL
-&kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &none    &kp DOT    &kp N4  &kp N5  &kp N6  &kp PLUS
-&none &none     &none     &none      &none      &none    &kp COMMA  &kp N1  &kp N2  &kp N3  &kp MINUS &none
-                               &none      &none    &mo 5      &kp N0
+       &none     &none     &none      &none      &none    &none      &kp N7  &kp N8  &kp N9  &kp EQUAL
+       &kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &none    &kp DOT    &kp N4  &kp N5  &kp N6  &kp PLUS
+&none  &none     &none     &none      &none      &none    &kp COMMA  &kp N1  &kp N2  &kp N3  &kp MINUS  &none
+                           &none      &none      &mo 5    &kp N0
             >;
         };
 
         symbols {
             bindings = <
-&none            &kp LT            &kp GT            &kp HASH                 &kp PRCNT    &kp PIPE   &kp COLON                 &kp LBRC          &kp RBRC         &none
-&hrml LALT EXCL  &hrml LGUI MINUS  &hrml LCTRL PLUS  &shift_left LSHFT EQUAL  &kp DQT      &kp AMPS   &shift_right LSHFT UNDER  &hrmr LCTRL LPAR  &hrmr LGUI RPAR  &hrmr LALT GRAVE
-&none &none            &kp BSLH          &kp STAR          &kp FSLH                 &kp QMARK    &kp TILDE  &kp DLLR                  &kp LBKT          &kp RBKT         &none &none
-                                                     &kp SQT                  &kp AT       &none      &none
+       &none            &kp LT            &kp GT            &kp HASH                 &kp PRCNT    &kp PIPE   &kp COLON                 &kp LBRC          &kp RBRC         &none
+       &hrml LALT EXCL  &hrml LGUI MINUS  &hrml LCTRL PLUS  &shift_left LSHFT EQUAL  &kp DQT      &kp AMPS   &shift_right LSHFT UNDER  &hrmr LCTRL LPAR  &hrmr LGUI RPAR  &hrmr LALT GRAVE
+&none  &none            &kp BSLH          &kp STAR          &kp FSLH                 &kp QMARK    &kp TILDE  &kp DLLR                  &kp LBKT          &kp RBKT         &none             &none
+                                          &kp SQT           &kp AT                   &none        &none
             >;
         };
 
         lower {
             bindings = <
-&kp K_PWR            &kp LA(LC(LG(F13)))  &kp LA(LC(LG(F14)))  &kp LA(LC(LG(F15)))     &kp PRINTSCREEN        &none  &kp LA(LC(LG(NUMBER_7)))  &kp LA(LC(LG(NUMBER_8)))  &kp LA(LC(LG(NUMBER_9)))  &none
-&kp K_LOCK           &kp C_PREV           &kp C_NEXT           &shift_left LSHFT C_PP  &kp LS(PRINTSCREEN)    &none  &kp LA(LC(LG(NUMBER_4)))  &kp LA(LC(LG(NUMBER_5)))  &kp LA(LC(LG(NUMBER_6)))  &none
-&none &kp LA(LC(LG(F16)))  &none                &none                &none                   &kp LA(F3)             &none  &kp LA(LC(LG(NUMBER_1)))  &kp LA(LC(LG(NUMBER_2)))  &kp LA(LC(LG(NUMBER_3)))  &none &none
-                                                               &kp C_VOL_DN            &kp C_VOL_UP           &none  &none
+       &kp K_PWR            &kp LA(LC(LG(F13)))  &kp LA(LC(LG(F14)))  &kp LA(LC(LG(F15)))     &kp PRINTSCREEN        &none  &kp LA(LC(LG(NUMBER_7)))  &kp LA(LC(LG(NUMBER_8)))  &kp LA(LC(LG(NUMBER_9)))  &none
+       &kp K_LOCK           &kp C_PREV           &kp C_NEXT           &shift_left LSHFT C_PP  &kp LS(PRINTSCREEN)    &none  &kp LA(LC(LG(NUMBER_4)))  &kp LA(LC(LG(NUMBER_5)))  &kp LA(LC(LG(NUMBER_6)))  &none
+&none  &kp LA(LC(LG(F16)))  &none                &none                &none                   &kp LA(F3)             &none  &kp LA(LC(LG(NUMBER_1)))  &kp LA(LC(LG(NUMBER_2)))  &kp LA(LC(LG(NUMBER_3)))  &none  &none
+                                                 &kp C_VOL_DN         &kp C_VOL_UP            &none                  &none
             >;
         };
 
         functions {
             bindings = <
-&none     &none     &none      &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
-&kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11
-&none &none     &none     &none      &none      &none    &none  &kp F1  &kp F2  &kp F3  &kp F10 &none
-                               &none      &none    &none  &none
+       &none     &none     &none      &none      &none    &none  &kp F7  &kp F8  &kp F9  &kp F12
+       &kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &none    &none  &kp F4  &kp F5  &kp F6  &kp F11
+&none  &none     &none     &none      &none      &none    &none  &kp F1  &kp F2  &kp F3  &kp F10  &none
+                           &none      &none      &none    &none
             >;
         };
     };
