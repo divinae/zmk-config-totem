@@ -105,18 +105,6 @@
             key-positions = <3 6>;
             layers = <1>;
         };
-
-        boot_left {
-            bindings = <&bootloader>;
-            key-positions = <0 21>;
-            layers = <2>;
-        };
-
-        boot_right {
-            bindings = <&bootloader>;
-            key-positions = <9 30>;
-            layers = <4>;
-        };
     };
 
     macros {
