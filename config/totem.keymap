@@ -145,7 +145,7 @@
        &kp LC(PAGE_UP)   &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(PAGE_DOWN)      &email           &kp PAGE_UP        &kp HOME       &kp LC(LA(LEFT))  &kp LA(LC(RIGHT))  &kp END
        &hrml LALT LC(A)  &kp LGUI      &kp LCTRL      &shift_left LSHFT DEL  &kp ENTER        &kp PAGE_DOWN      &kp LEFT       &kp DOWN          &kp UP             &kp RIGHT
 &none  &kp LC(Z)         &kp LC(X)     &kp LC(C)      &kp LC(V)              &kp LS(LC(Z))    &kp K_APP          &kp BACKSPACE  &kp LC(Z)         &kp LC(LS(Z))      &kp DEL    &none
-                                       &none          &none                  &none            &kp LC(BACKSPACE)  &kp LC(DEL)    &none
+                                       &none          &none                  &none            &kp LC(BACKSPACE)  &kp LC(DEL)    &kp TAB
             >;
         };
 
