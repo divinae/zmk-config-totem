@@ -110,12 +110,6 @@
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <0 9>;
         };
-
-        caps {
-            bindings = <&kp CAPS>;
-            key-positions = <3 6>;
-            layers = <1>;
-        };
     };
 
     macros {
