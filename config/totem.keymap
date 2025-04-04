@@ -41,6 +41,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 22 23 24 25 21 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30>;
         };
 
         shift_left: shift_left {
@@ -78,6 +79,7 @@
             flavor = "balanced";
             tapping-term-ms = <170>;
             quick-tap-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 22 23 24 25 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 21>;
         };
 
         backspace: backspace {
@@ -89,6 +91,7 @@
             flavor = "balanced";
             tapping-term-ms = <170>;
             quick-tap-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 22 23 24 25 21 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30>;
         };
 
         tumb_key: tumb_key {
