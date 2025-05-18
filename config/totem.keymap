@@ -122,10 +122,10 @@
 
         base {
             bindings = <
-       &kp Q         &kp W         &kp E          &kp R                   &kp T           &kp Y           &kp U                  &kp I               &kp O         &kp P
-       &hrml LALT A  &hrml LGUI S  &hrml LCTRL D  &shift_left LSHIFT F    &kp G           &kp H           &shift_right LSHIFT J  &hrmr LCTRL K       &hrmr LGUI L  &hrmr LALT SEMI
-&none  &kp Z         &kp X         &kp C          &kp V                   &kp B           &kp N           &kp M                  &kp COMMA           &kp DOT       &kp FSLH         &caps_word
-                                   &thumb 5 DEL   &backspace 1 BACKSPACE  &thumb 2 ESC    &thumb 4 ENTER  &space 3 SPACE         &tumb_key RALT TAB
+         &kp Q         &kp W         &kp E          &kp R                   &kp T           &kp Y           &kp U                  &kp I          &kp O         &kp P
+         &hrml LALT A  &hrml LGUI S  &hrml LCTRL D  &shift_left LSHIFT F    &kp G           &kp H           &shift_right LSHIFT J  &hrmr LCTRL K  &hrmr LGUI L  &hrmr LALT SEMI
+&kp TAB  &kp Z         &kp X         &kp C          &kp V                   &kp B           &kp N           &kp M                  &kp COMMA      &kp DOT       &kp FSLH         &caps_word
+                                     &thumb 5 DEL   &backspace 1 BACKSPACE  &thumb 2 ESC    &thumb 4 ENTER  &space 3 SPACE         &kp RALT
             >;
         };
 
@@ -140,10 +140,10 @@
 
         numbers {
             bindings = <
-       &none     &none     &none      &none      &none    &none      &kp N7  &kp N8  &kp N9  &kp EQUAL
-       &kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &none    &kp DOT    &kp N4  &kp N5  &kp N6  &kp PLUS
-&none  &none     &none     &none      &none      &none    &kp COMMA  &kp N1  &kp N2  &kp N3  &kp MINUS  &none
-                           &none      &none      &none    &none      &kp N0  &none
+       &none     &none     &none      &none      &none    &none      &kp N7       &kp N8  &kp N9  &kp EQUAL
+       &kp LALT  &kp LGUI  &kp LCTRL  &kp LSHFT  &none    &kp DOT    &kp N4       &kp N5  &kp N6  &kp PLUS
+&none  &none     &none     &none      &none      &none    &kp COMMA  &kp N1       &kp N2  &kp N3  &kp MINUS  &none
+                           &none      &none      &none    &kp N0     &space 5 N0  &kp N0
             >;
         };
 
