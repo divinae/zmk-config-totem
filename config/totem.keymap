@@ -115,6 +115,13 @@
             bindings = <&kp L &kp I &kp P &kp I &kp N &kp S &kp K &kp I &kp DOT &kp J &kp AT &kp P &kp M &kp DOT &kp M &kp E>;
             label = "EMAIL";
         };
+
+        arrow_right: arrow_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
+            label = "ARROW_RIGHT";
+        };
     };
 
     keymap {
@@ -149,10 +156,10 @@
 
         symbols {
             bindings = <
-       &none            &kp LT            &kp GT            &kp HASH                 &kp PRCNT    &kp PIPE   &kp COLON                &kp LBRC          &kp RBRC         &none
-       &hrml LALT EXCL  &hrml LGUI MINUS  &hrml LCTRL PLUS  &hrml_shift LSHFT EQUAL  &kp DQT      &kp AMPS   &hrmr_shift LSHFT UNDER  &hrmr LCTRL LPAR  &hrmr LGUI RPAR  &hrmr LALT GRAVE
-&none  &none            &kp BSLH          &kp STAR          &kp FSLH                 &kp QMARK    &kp TILDE  &kp DLLR                 &kp LBKT          &kp RBKT         &none             &none
-                                          &none             &kp SQT                  &kp AT       &none      &none                    &none
+       &kp TILDE        &kp LT            &kp GT            &kp HASH                 &arrow_right         &kp PIPE     &kp COLON                &kp LBRC          &kp RBRC         &none
+       &hrml LALT EXCL  &hrml LGUI MINUS  &hrml LCTRL PLUS  &hrml_shift LSHFT EQUAL  &kp DOUBLE_QUOTES    &kp AMPS     &hrmr_shift LSHFT UNDER  &hrmr LCTRL LPAR  &hrmr LGUI RPAR  &none
+&none  &kp AT           &kp BSLH          &kp STAR          &kp FSLH                 &kp QMARK            &kp PERCENT  &kp DLLR                 &kp LBKT          &kp RBKT         &none  &none
+                                          &none             &kp SQT                  &kp GRAVE            &none        &none                    &none
             >;
         };
 
