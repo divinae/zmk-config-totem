@@ -9,7 +9,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 35 37 36 32 33 34>; // right-side + thumbs
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 35 37 36 32 33 34 31>; // right-side + thumbs
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             hold-trigger-on-release;
@@ -25,7 +25,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 32 33 34 25 37 36 35>; // left-side + thumbs
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 32 33 34 25 37 36 35 20>; // left-side + thumbs
             hold-trigger-on-release;
             quick-tap-ms = <300>;
             require-prior-idle-ms = <170>;
@@ -43,28 +43,28 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 22 23 24 25 21 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 20 31 36 37 35 34 33 32>;
         };
 
-        shift_left: shift_left {
+        hrml_shift: hrml_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_LEFT";
+            label = "HRML_SHIFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 32 33 34 35 37 36>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 32 33 34 35 37 36 31>;
             flavor = "tap-preferred";
-            tapping-term-ms = <170>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <300>;
             require-prior-idle-ms = <70>;
         };
 
-        shift_right: shift_right {
+        hrmr_shift: hrmr_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "SHIFT_RIGHT";
+            label = "HRMR_SHIFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <170>;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 32 33 34 25 37 36 35>;
+            tapping-term-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 32 33 34 25 37 36 35 20>;
             quick-tap-ms = <300>;
             require-prior-idle-ms = <70>;
         };
@@ -103,30 +103,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 25 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30>;
-        };
-
-        hrmr_shift: hrmr_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRMR_SHIFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            hold-trigger-key-positions = <0 1 4 10 11 12 13 14 21 22 23 24 25 32 33 34 2 3 20>;
-            hold-trigger-on-release;
-        };
-
-        hrml_shift: hrml_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRML_SHIFT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-while-undecided;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <9 15 16 17 18 19 26 27 28 29 30 31 35 36 37 6 5 7 8>;
         };
     };
 
@@ -173,17 +149,17 @@
 
         symbols {
             bindings = <
-       &none            &kp LT            &kp GT            &kp HASH                 &kp PRCNT    &kp PIPE   &kp COLON                 &kp LBRC          &kp RBRC         &none
-       &hrml LALT EXCL  &hrml LGUI MINUS  &hrml LCTRL PLUS  &shift_left LSHFT EQUAL  &kp DQT      &kp AMPS   &shift_right LSHFT UNDER  &hrmr LCTRL LPAR  &hrmr LGUI RPAR  &hrmr LALT GRAVE
-&none  &none            &kp BSLH          &kp STAR          &kp FSLH                 &kp QMARK    &kp TILDE  &kp DLLR                  &kp LBKT          &kp RBKT         &none             &none
-                                          &none             &kp SQT                  &kp AT       &none      &none                     &none
+       &none            &kp LT            &kp GT            &kp HASH                 &kp PRCNT    &kp PIPE   &kp COLON                &kp LBRC          &kp RBRC         &none
+       &hrml LALT EXCL  &hrml LGUI MINUS  &hrml LCTRL PLUS  &hrml_shift LSHFT EQUAL  &kp DQT      &kp AMPS   &hrmr_shift LSHFT UNDER  &hrmr LCTRL LPAR  &hrmr LGUI RPAR  &hrmr LALT GRAVE
+&none  &none            &kp BSLH          &kp STAR          &kp FSLH                 &kp QMARK    &kp TILDE  &kp DLLR                 &kp LBKT          &kp RBKT         &none             &none
+                                          &none             &kp SQT                  &kp AT       &none      &none                    &none
             >;
         };
 
         lower {
             bindings = <
        &kp K_PWR            &kp LA(LC(LG(F13)))  &kp LA(LC(LG(F14)))  &kp LA(LC(LG(F15)))     &kp PRINTSCREEN        &none  &kp LA(LC(LG(NUMBER_7)))  &kp LA(LC(LG(NUMBER_8)))  &kp LA(LC(LG(NUMBER_9)))  &none
-       &kp K_LOCK           &kp C_PREV           &kp C_NEXT           &shift_left LSHFT C_PP  &kp LS(PRINTSCREEN)    &none  &kp LA(LC(LG(NUMBER_4)))  &kp LA(LC(LG(NUMBER_5)))  &kp LA(LC(LG(NUMBER_6)))  &none
+       &kp K_LOCK           &kp C_PREV           &kp C_NEXT           &hrml_shift LSHFT C_PP  &kp LS(PRINTSCREEN)    &none  &kp LA(LC(LG(NUMBER_4)))  &kp LA(LC(LG(NUMBER_5)))  &kp LA(LC(LG(NUMBER_6)))  &none
 &none  &kp LA(LC(LG(F16)))  &none                &none                &none                   &kp LA(F3)             &none  &kp LA(LC(LG(NUMBER_1)))  &kp LA(LC(LG(NUMBER_2)))  &kp LA(LC(LG(NUMBER_3)))  &none  &none
                                                  &none                &kp C_VOL_DN            &kp C_VOL_UP           &none  &none                     &none
             >;
