@@ -104,6 +104,30 @@
             quick-tap-ms = <300>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 21 22 23 24 25 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30>;
         };
+
+        hrmr_shift: hrmr_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRMR_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            hold-trigger-key-positions = <0 1 4 10 11 12 13 14 21 22 23 24 25 32 33 34 2 3 20>;
+            hold-trigger-on-release;
+        };
+
+        hrml_shift: hrml_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRML_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <9 15 16 17 18 19 26 27 28 29 30 31 35 36 37 6 5 7 8>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -122,10 +146,10 @@
 
         base {
             bindings = <
-         &kp Q         &kp W         &kp E          &kp R                   &kp T           &kp Y           &kp U                  &kp I          &kp O         &kp P
-         &hrml LALT A  &hrml LGUI S  &hrml LCTRL D  &shift_left LSHIFT F    &kp G           &kp H           &shift_right LSHIFT J  &hrmr LCTRL K  &hrmr LGUI L  &hrmr LALT SEMI
-&kp TAB  &kp Z         &kp X         &kp C          &kp V                   &kp B           &kp N           &kp M                  &kp COMMA      &kp DOT       &kp FSLH         &caps_word
-                                     &thumb 5 DEL   &backspace 1 BACKSPACE  &thumb 2 ESC    &thumb 4 ENTER  &space 3 SPACE         &kp RALT
+         &kp Q         &kp W         &kp E          &kp R                   &kp T           &kp Y           &kp U                 &kp I          &kp O         &kp P
+         &hrml LALT A  &hrml LGUI S  &hrml LCTRL D  &hrml_shift LSHIFT F    &kp G           &kp H           &hrmr_shift LSHIFT J  &hrmr LCTRL K  &hrmr LGUI L  &hrmr LALT SEMI
+&kp TAB  &kp Z         &kp X         &kp C          &kp V                   &kp B           &kp N           &kp M                 &kp COMMA      &kp DOT       &kp FSLH         &caps_word
+                                     &thumb 5 DEL   &backspace 1 BACKSPACE  &thumb 2 ESC    &thumb 4 ENTER  &space 3 SPACE        &kp RALT
             >;
         };
 
